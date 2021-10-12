@@ -1,53 +1,54 @@
 body{
-	background-color: black;
-	color: white;
+  background-color: black;
+  color: white;
 }
-.dropdown{
-	text-align: center;
-	position: fixed;
-	bottom: 0px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: stretch;
+
+.parent{
+  display: flex;
+  justify-content: center;
+  position: relative;
 }
-button{
-	margin: 1px;
-	border: solid pink 1px;
+
+.object{
+  width: 100%;
+  height: auto;
+  margin: 0;
+  /* top: 50%; */
+  /* transform: translateY(50%); */
 }
+
 .a{
-	position: absolute;
-	width: 96%;
-	height: 96%;
-	object-fit: cover;
+  position: absolute;
+  width: 100%;
+  height: auto;
 }
+
 .lampu{
-	position: absolute;
-	width: 100%;
-	left: 0px;
-	top: 0px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  /* left: 4.4rem; */
+  top: 2.3rem;
 }
+
 .bulat {
-	position: absolute;
-	background-image: linear-gradient(to right, #ff5aa3, #ff568b, #ff5772, #ff5d59, #ff6640, #ff7432, #ff8420, #ff9300, #ffa700, #ffbb00, #ffce00, #ffe20f);
-	filter: blur(1px);
-	height: 270px;
-	width: 270px;
-	left: 61.5px;
-	top: 62.5px;
-	border-radius: 50%;
+  background-image: linear-gradient(to right, #ff5aa3, #ff568b, #ff5772, #ff5d59, #ff6640, #ff7432, #ff8420, #ff9300, #ffa700, #ffbb00, #ffce00, #ffe20f);
+  filter: blur(1px);
+  border-radius: 50%;
+  height: 270px;
+  width: 270px;
   animation: rotation 2s infinite linear;
+  position: absolute;
 }
+ 
 .blur {
-	position: absolute;
-	background-image: linear-gradient(to right, #ff5aa3, #ff568b, #ff5772, #ff5d59, #ff6640, #ff7432, #ff8420, #ff9300, #ffa700, #ffbb00, #ffce00, #ffe20f);
-	filter: blur(20px);
-	height: 270px;
-	width: 270px;
-	left: 61.5px;
-	top: 62.5px;
-	border-radius: 50%;
+  background-image: linear-gradient(to right, #ff5aa3, #ff568b, #ff5772, #ff5d59, #ff6640, #ff7432, #ff8420, #ff9300, #ffa700, #ffbb00, #ffce00, #ffe20f);
+  filter: blur(20px);
+  border-radius: 50%;
+  height: 270px;
+  width: 270px;
   animation: rotation 2s infinite linear;
+  position: absolute;
 }
 
 @keyframes rotation {
