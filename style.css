@@ -4,51 +4,55 @@ body{
   color: white;
 }
 
-.parent{
-  display: flex;
-  justify-content: center;
-  position: relative;
-}
-
-.object{
+.stick {
+  background-image: url("1.png");
+  background-position: top center;
+  background-size: contain;
+  background-repeat: no-repeat;
   width: 100%;
-  height: auto;
-  margin: 0;
-  /* top: 50%; */
-  /* transform: translateY(50%); */
-}
-
-.a{
+  height: 280%;
   position: absolute;
-  width: 100%;
-  height: auto;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: -999;
 }
 
-.lampu{
-  display: flex;
-  justify-content: center;
+.parent {
   position: relative;
-  /* left: 4.4rem; */
-  top: 2.3rem;
+	width: 30vw;
+	height: 30vw;
+	position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.bulet-overlay {
+  background-image: url("3.png");
+  background-position: top left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .bulat {
   background-image: linear-gradient(to right, #ff5aa3, #ff568b, #ff5772, #ff5d59, #ff6640, #ff7432, #ff8420, #ff9300, #ffa700, #ffbb00, #ffce00, #ffe20f);
   filter: blur(1px);
   border-radius: 50%;
-  height: 270px;
-  width: 270px;
+  height: 100%;
+  width: 100%;
   animation: rotation 2s infinite linear;
-  position: absolute;
+  /* position: absolute; */
 }
  
 .blur {
-  background-image: linear-gradient(to right, #ff5aa3, #ff568b, #ff5772, #ff5d59, #ff6640, #ff7432, #ff8420, #ff9300, #ffa700, #ffbb00, #ffce00, #ffe20f);
   filter: blur(20px);
-  border-radius: 50%;
-  height: 270px;
-  width: 270px;
-  animation: rotation 2s infinite linear;
   position: absolute;
 }
 
