@@ -7,26 +7,36 @@ body{
   position: absolute;
   width: 100vw;
   height: 100%;
-  border: 1px solid red;
-}
-
-.lightstick {
-  position: relative;
-  width: 80vw;
-  height: 173vw;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  border: 1px solid red;
 }
 
 .parent {
   width: 70vw;
-  height: 70vw;
-  position: relative;
+  height: 100%;
   left: 50%;
   transform: translate(-50%, 0%);
-  border: 1px solid red;
+  position: absolute;
+  z-index: 10000;
+}
+
+.stick {
+  background-image: url("1.png");
+  background-position: top center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  bottom: 0%;
+  z-index: -999;
+}
+
+.bulat-container {
+  height: 45%;
+  aspect-ratio: 1 / 1;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  top: 0%;
+  position: absolute;
 }
 
 .bulet-overlay {
@@ -43,32 +53,30 @@ body{
   transform: translate(-50%, -50%);
 }
 
-.stick {
-  background-image: url("1.png");
-  background-position: top center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 150%;
-  position: absolute;
-  top: 96%;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  z-index: -999;
-}
-
 .bulat {
   background-image: linear-gradient(to right, #fed605, #ff7631, #ff5793);
   filter: blur(1px);
   border-radius: 50%;
-  height: 100%;
   width: 100%;
+  height: 100%;
   animation: rotation 2s infinite linear;
+  position: absolute;
 }
  
 .blur {
   filter: blur(20px);
-  position: absolute;
+}
+
+.border1 {
+	outline: 3px red solid;
+}
+
+.border2 {
+	outline: 5px green solid;
+}
+
+.border3 {
+	outline: 3px blue solid;
 }
 
 @keyframes rotation {
@@ -79,3 +87,48 @@ body{
     transform: rotate(359deg);
   }
 }
+
+@keyframes fall {
+  0% { opacity: 0; }
+  
+  12.5% { transform: rotate(90deg); }
+  25% { transform: rotate(180deg); }
+  37.5% { transform: rotate(270deg); }
+  50% { transform: rotate(360deg); }
+  62.5% { transform: rotate(450deg); }
+  75% { transform: rotate(540deg); }
+  87.5% { transform: rotate(630deg); }
+  
+  100% {
+      top: 100%;
+      transform: rotate(720deg);
+  }
+}
+
+.random {
+  position: sticky;
+  top: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.random img {
+  position: absolute;
+  animation: fall 7s linear infinite;
+  animation-fill-mode: forwards;
+  opacity: 0.4;
+  top: -100px;
+  z-index: -999999;
+}
+
+.random img:nth-child(1) { left: -5%; animation-delay: -6s; }
+.random img:nth-child(2) { left: 20%; animation-delay: -7s; }
+.random img:nth-child(3) { left: 6%; animation-delay: -2s; }
+.random img:nth-child(4) { left: 23%; animation-delay: -1s; }
+.random img:nth-child(5) { left: 43%; animation-delay: -2s; }
+.random img:nth-child(6) { left: 30%; animation-delay: -6s; }
+.random img:nth-child(7) { left: 57%; animation-delay: -1s; }
+.random img:nth-child(8) { left: 49%; animation-delay: -2s; }
+.random img:nth-child(9) { left: 59%; animation-delay: -5s; }
+.random img:nth-child(10) { left: 61%; animation-delay: -3s; }
+.random img:nth-child(11) { left: 75%; animation-delay: -4s; }
