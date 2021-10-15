@@ -1,58 +1,56 @@
-/* Ferdian Ganteng */
 body{
   background-color: black;
   color: white;
 }
 
-.stick {
-  background-image: url("1.png");
-  background-position: top center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 150%;
+.viewport {
   position: absolute;
-  top: 90%;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  z-index: -999;
+  width: 100%;
+  height: 100%;
 }
 
 .parent {
-  position: relative;
-  width: 70vw;
-  height: 70vw;
-  position: absolute;
-  left: 50%;
   top: 50%;
-  transform: translate(-50%, -120%);
+  transform: translate(0%, -50%);
+  position: absolute;
 }
 
 .bulet-overlay {
-  background-image: url("3.png");
-  background-position: top left;
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 75%;
-  height: 75%;
-  position: absolute;
+  width: 100%;
+  height: auto;
   bottom: 0;
+  z-index: 10;
+}
+
+.stick {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: -999;
+}
+
+.lampu {
+  width: 77vw;
+  height: 77vw;
+  position: absolute;
+  top: 1.4%;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0%);
+  z-index: -10;
 }
 
 .bulat {
-  background-image: linear-gradient(to right, #ff5aa3, #ff568b, #ff5772, #ff5d59, #ff6640, #ff7432, #ff8420, #ff9300, #ffa700, #ffbb00, #ffce00, #ffe20f);
+  background-image: linear-gradient(to right, #fed605, #ff7631, #ff5793);
   filter: blur(1px);
   border-radius: 50%;
   height: 100%;
   width: 100%;
   animation: rotation 2s infinite linear;
+  position: absolute;
 }
  
 .blur {
-  filter: blur(20px);
+  filter: blur(30px);
   position: absolute;
 }
 
